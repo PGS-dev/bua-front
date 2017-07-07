@@ -1,1 +1,1 @@
-# bua-front
+react_starter
