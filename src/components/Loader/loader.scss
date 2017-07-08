@@ -1,0 +1,42 @@
+$primary-color: #00bcd4;
+
+.loader > div {
+	animation: fade 2.2s infinite;
+	-webkit-animation: fade 2.2s infinite;
+   	-moz-animation: fade 2.2s infinite;
+   	-o-animation: fade 2.2s infinite;
+	display: inline-block;
+}
+
+@keyframes fade {
+  0%, 80%, 100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@mixin dot {
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	background: $primary-color;
+	display: inline-block;
+}
+
+.loader .dot1 {
+  @include dot;
+	animation-delay: -0.32s;
+  margin-right: 4px;
+}
+
+.loader .dot2 {
+  @include dot;
+	animation-delay: -0.16s;
+  margin-right: 4px;
+}
+
+.loader .dot3 {
+	@include dot;
+}
