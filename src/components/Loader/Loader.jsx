@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './loader.scss';
-
-console.log(styles);
 
 export default () => (
   <div className={styles.loader}>

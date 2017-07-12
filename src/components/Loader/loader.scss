@@ -22,18 +22,20 @@ $primary-color: #00bcd4;
 	display: inline-block;
 }
 
-.loader .dot1 {
-  @include dot;
-	animation-delay: -0.32s;
-  margin-right: 4px;
-}
+.loader {
+  .dot1 {
+    @include dot;
+  	animation-delay: -0.32s;
+    margin-right: 4px;
+    }
 
-.loader .dot2 {
-  @include dot;
-	animation-delay: -0.16s;
-  margin-right: 4px;
-}
+    .dot2 {
+      @include dot;
+    	animation-delay: -0.16s;
+      margin-right: 4px;
+    }
 
-.loader .dot3 {
-	@include dot;
+    .dot3 {
+    	@include dot;
+    }
 }

@@ -17,6 +17,7 @@ module.exports = {
     filename: '[name].js',
     chunkFilename: '[name].bundle.js',
   },
+  devtool: 'source-map',
   module: {
     loaders: [{
       test: /\.(js|jsx)$/,
@@ -24,10 +25,17 @@ module.exports = {
       exclude: /node_modules/,
     }, {
       test: /\.scss$/,
-      loaders: [
+      use: [
         'style-loader',
-        'css-loader?sourceMap&modules&localIdentName=[name]__[local]__[hash:base64:5]',
-        'sass-loader'
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+            modules: true,
+            localIdentName: '[name]__[local]__[hash:base64:5]',
+          },
+        },
+        'sass-loader',
       ],
     }, {
       test: /\.(png|jpg|gif|svg)$/,
@@ -36,7 +44,9 @@ module.exports = {
         options: {
           limit: 8192,
         },
-      }, 'image-webpack-loader'],
+      },
+        'image-webpack-loader',
+      ],
     }],
   },
   plugins: [
