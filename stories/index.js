@@ -5,11 +5,13 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
+import Loader from '../src/components/Loader/Loader';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
   .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
   .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
-storiesOf('Text', module)
-  .add('with hello world', () => <div>Hello World!</div>);
+
+storiesOf('Loader', module)
+  .add('standard', () => <Loader/>);

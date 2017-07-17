@@ -9,12 +9,12 @@ import FlatButton from 'material-ui/FlatButton';
 import { Link } from 'react-router-dom';
 
 // Stylesheets
-require('./nav.scss');
+import styles from './nav.scss';
 
 export default () => (
   <AppBar
     title={<span>React starter</span>}
-    className="navbar"
+    className={styles.navbar}
     iconElementRight={
       <span>
         <Link to="/"><FlatButton label="Home" /></Link>
